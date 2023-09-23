@@ -25,6 +25,7 @@ class NFLFootballGame:
         
         # Stat tables
         self.quarter_table = None
+        self.scoring_summary_table = None
         self.game_info_table = None
         self.officials_table = None
         self.expected_points_table = None
@@ -37,18 +38,25 @@ class StatTable:
     def __init__(self, table_name, df):
         self.table_name = table_name
         self.df = df
+        
+    def send_table_to_pickle(self, path):
+        self.df.to_pickle(path)
+        return
 
 class QuarterScores(StatTable):
     def __init__(self, table_name, df):
         super().__init__(table_name, df)
-        self.q1_away_score=0
-        self.q2_away_score=0
-        self.q3_away_score=0
-        self.q4_away_score=0
-        self.q1_home_score=0
-        self.q2_home_score=0
-        self.q3_home_score=0
-        self.q4_home_score=0
+        self.q1_away=0
+        self.q2_away=0
+        self.q3_away=0
+        self.q4_away=0
+        self.ot_away=0
+        self.q1_home=0
+        self.q2_home=0
+        self.q3_home=0
+        self.q4_home=0
+        self.ot_home=0
+
 
 class Scoring(StatTable):
     def __init__(self, table_name, df):
