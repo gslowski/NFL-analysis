@@ -35,3 +35,8 @@ class Constants:
                     }
     
     TEAM_NAME_ABBR_SWAPPED = {v: k for k, v in TEAM_NAME_ABBR.items()}
+    TEAM_NAME_ABBR_SWAPPED['San Diego Chargers'] = 'SDG'
+    TEAM_NAME_ABBR_SWAPPED['Oakland Raiders'] = 'OAK'
+    TEAM_NAME_ABBR_SWAPPED['Washington Redskins'] = 'WAS'
+    TEAM_NAME_ABBR_SWAPPED['Washington Football Team'] = 'WAS'
+    TEAM_NAME_ABBR_SWAPPED['St. Louis Rams'] = 'STL'
